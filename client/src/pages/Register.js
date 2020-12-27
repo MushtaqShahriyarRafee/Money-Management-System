@@ -39,7 +39,7 @@ class Register extends React.Component {
             <
             label htmlFor = "name" > Name: < /label> <
             input type = "text"
-            className = 'form-control'
+            className = 'form-control my-2'
             placeholder = "Enter your name"
             name = 'name'
             id = 'name'
@@ -53,7 +53,7 @@ class Register extends React.Component {
             <
             label htmlFor = "email" > Email: < /label> <
             input type = "email"
-            className = 'form-control'
+            className = 'form-control my-2'
             placeholder = "Enter your email"
             name = 'email'
             id = 'email'
@@ -67,7 +67,7 @@ class Register extends React.Component {
             <
             label htmlFor = "password" > Password: < /label> <
             input type = "password"
-            className = 'form-control'
+            className = 'form-control my-2'
             placeholder = "Enter your password"
             name = 'password'
             id = 'password'
@@ -81,7 +81,7 @@ class Register extends React.Component {
             <
             label htmlFor = "confirmPassword" > Confirm Password: < /label> <
             input type = "password"
-            className = 'form-control'
+            className = 'form-control my-2'
             placeholder = "Comfirm your password"
             name = 'confirmPassword'
             id = 'confirmPassword'

@@ -43,7 +43,7 @@ class Login extends React.Component {
 
             <
             /div> <
-            div className = 'form-group' >
+            div className = 'form-group my-3' >
             <
             label htmlFor = "password" > Password: < /label> <
             input type = "password"
