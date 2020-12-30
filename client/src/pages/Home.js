@@ -8,7 +8,7 @@ class Home extends React.Component {
         return ( <
                 div >
                 <
-                hi > I am Home < /hi> {
+                h1 > I am Home < /h1> {
                 this.props.auth.isAuthenticated ?
                 <
                 button className = 'bth btn-danger'
