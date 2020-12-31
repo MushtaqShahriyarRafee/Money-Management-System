@@ -33,6 +33,7 @@ exports.postLogin = (req, res) => {
 
     //Check for user availability
     User.findOne({ email })
+        // use populate for transaction
         .then((user) => {
             if (!user) {
                 return resourceError(res, "User not found :(")
@@ -51,7 +52,11 @@ exports.postLogin = (req, res) => {
                 let token = jwt.sign({
                     _id: user._id,
                     name: user.name,
-                    email: user.email
+                    email: user.email,
+                    amount: user.amount,
+                    income: user.income,
+                    expense: user.expense,
+                    transactions: user.transactions
                 }, 'SECRET', { expiresIn: '24h' })
 
                 res.status(200).json({
@@ -93,7 +98,11 @@ exports.postRegister = (req, res) => {
                     let user = new User({
                         name,
                         email,
-                        password: hash
+                        password: hash,
+                        balance: 0,
+                        income: 0,
+                        expense: 0,
+                        transactions: []
                     })
 
                     //save to database
@@ -103,8 +112,8 @@ exports.postRegister = (req, res) => {
                             return res.status(201).json({
                                 message: `User has been created successfully :)`,
                                 //response back with new data
-                                ...user._doc
-                                // user
+                                // ...user._doc
+                                user
                             })
                         })
                         .catch((error) => serverError(res, error.message))
@@ -113,4 +122,12 @@ exports.postRegister = (req, res) => {
             .catch((error) => serverError(res, error.message))
 
     }
+}
+
+exports.getUser = (req, res) => {
+    User.find()
+        .then(users => {
+            res.status(200).json(users)
+        })
+        .catch((error) => serverError(res, error.message))
 }

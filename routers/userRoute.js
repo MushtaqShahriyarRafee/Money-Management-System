@@ -9,5 +9,7 @@ router.post('/register', userController.postRegister)
 //localhost:4000/api/users/login
 router.post('/login', userController.postLogin)
 
+router.get('/allUsers', userController.getUser)
+
 
 module.exports = router
