@@ -3,12 +3,12 @@ const authenticate = require('../authenticate')
 const transactionController = require('../controllers/transactionController')
 
 //Adding transaction route
-//localhost:4000/api/users/transaction
-router.post('/create', authenticate, transactionController.postTransaction)
+//localhost:4000/api/transactions/
+router.post('/', authenticate, transactionController.postTransaction)
 
 //Viewing transactions route
-//localhost:4000/api/users/transactionInfo
-router.get('/allTransactions', authenticate, transactionController.getTransaction)
+//localhost:4000/api/transactions/
+router.get('/', authenticate, transactionController.getTransaction)
 
 //Viewing a single transaction route
 //localhost:4000/api/users/

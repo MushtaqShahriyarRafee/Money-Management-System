@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import Home from '../pages/Home'
 import Login from '../pages/Login'
 import Register from '../pages/Register'
+import Dashboard from '../pages/Dashboard'
 
 function App() {
     return ( <
@@ -16,11 +17,14 @@ function App() {
         exact component = { Home }
         /> <
         Route path = '/login'
-        exact component = { Login }
+        component = { Login }
         /> <
         Route path = '/register'
-        exact component = { Register }
-        /> < /
+        component = { Register }
+        />  <
+        Route path = '/dashboard'
+        component = { Dashboard }
+        />< /
         Switch >
 
         <
