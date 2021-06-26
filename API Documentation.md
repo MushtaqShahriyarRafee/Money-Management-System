@@ -5,7 +5,7 @@
 
 ### 1. Student Registration
 
-> POST [URL](http://127.0.0.1:8000)/user/register
+> POST [URL](https://sust-exam-management-system.herokuapp.com)/user/register
 ```json
 {
 "registrationType": "student",
@@ -69,7 +69,7 @@
 
 ### 3. Student login
 
-> POST http://127.0.0.1:8000/user/login
+> POST [URL](https://sust-exam-management-system.herokuapp.com)/user/login
 ```json
 {
 "loginType": "student",
@@ -105,7 +105,7 @@
 
 ### 4. Teacher login
 
-> POST http://127.0.0.1:8000/user/login
+> POST [URL](https://sust-exam-management-system.herokuapp.com)/user/login
 ```json
 {
 "loginType": "teacher",
@@ -140,7 +140,7 @@
 
 ### 5. Provide User info (must have to pass token as x-auth-header)
 
-GET http://127.0.0.1:8000/user/userInfo
+GET [URL](https://sust-exam-management-system.herokuapp.com)/user/userInfo
 x-auth-header: TOKEN
 
 > Response: _For teacher_
@@ -214,7 +214,7 @@ x-auth-header: TOKEN
 
 ### 6. Provide Teacher info (must have to pass token as x-auth-header)
 
-GET http://127.0.0.1:8000/user/teacherInfo
+GET [URL](https://sust-exam-management-system.herokuapp.com)/user/teacherInfo
 x-auth-header: TOKEN
 
 Response:
@@ -243,7 +243,7 @@ Response:
 
 ### 7. Provide assigned courses of a teacher (must have to pass token as x-auth-header)
 
-GET http://127.0.0.1:8000/user/assigns
+GET [URL](https://sust-exam-management-system.herokuapp.com)/user/assigns
 x-auth-header: TOKEN
 
 Response:
@@ -322,7 +322,7 @@ Response:
 
 ### 8. Create an exam (must have to pass token as x-auth-header)
 
-POST http://127.0.0.1:8000/exam/examInfo
+POST [URL](https://sust-exam-management-system.herokuapp.com)/exam/examInfo
 x-auth-header: TOKEN
 
 {
@@ -354,7 +354,7 @@ Response:
 
 ### 9. Create a question (must have to pass token as x-auth-header)
 
-POST http://127.0.0.1:8000/exam/questionInfo
+POST [URL](https://sust-exam-management-system.herokuapp.com)/exam/questionInfo
 x-auth-header: TOKEN
 
 {
@@ -384,7 +384,7 @@ Response:
 
 ### 10. Provide all the questions of a teacher (must have to pass token as x-auth-header)
 
-GET http://127.0.0.1:8000/exam/questionsOfTeacher
+GET [URL](https://sust-exam-management-system.herokuapp.com)/exam/questionsOfTeacher
 x-auth-header: TOKEN
 
 {
@@ -431,7 +431,7 @@ Response:
 
 ### 11. Storing answer of a student (must have to pass token as x-auth-header)
 
-POST http://127.0.0.1:8000/exam/studentAnswerSheet
+POST [URL](https://sust-exam-management-system.herokuapp.com)/exam/studentAnswerSheet
 x-auth-header: TOKEN
 
 {
@@ -470,7 +470,7 @@ Response:
 
 ### 12. Enroll an exam (must have to pass token as x-auth-header)
 
-POST http://127.0.0.1:8000/enroll/enrollmentCode
+POST [URL](https://sust-exam-management-system.herokuapp.com)/enroll/enrollmentCode
 x-auth-header: TOKEN
 
 {
