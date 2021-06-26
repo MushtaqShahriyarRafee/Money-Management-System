@@ -68,6 +68,7 @@
 ```
 
 ### 3. Student login
+
 > POST http://127.0.0.1:8000/user/login
 ```json
 {
@@ -82,7 +83,7 @@
 {
 "authStatus": true,
 "message": "Login Successful, please update your profile",
-"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwYzMzNWYwZTljZjFjMDlmMzE3ZDNiZSIsInJlZ05vIjoiMjAxNjMzMTAyOCIsImRlcHRJZCI6IjYwYmY1NmQ2Yjc5OTZiMTI1YmE4N2IzNSIsImRlcHRDb2RlIjoiQ1NFIiwiZGVwdE5hbWUiOiJDb21wdXRlciBTY2llbmNlIGFuZCBFbmdpbmVlcmluZyIsImZpcnN0TmFtZSI6bnVsbCwibGFzdE5hbWUiOm51bGwsImVtYWlsIjpudWxsLCJnZW5kZXIiOm51bGwsImNvbnRhY3ROdW1iZXIiOm51bGwsImFkZHJlc3MiOm51bGwsImJsb29kR3JvdXAiOm51bGwsInJvbGUiOiJzdHVkZW50IiwiaWF0IjoxNjIzNDA2NDkzLCJleHAiOjE2MjM0OTI4OTN9.pdtugAe7nj7MPX3YkkpW3KEU-tSletfYe3S_bdtSVWE",
+"token": TOKEN,
 "expiresIn": 86400,
 "user": {
 "id": "60c335f0e9cf1c09f317d3be",
@@ -103,8 +104,9 @@
 ```
 
 ### 4. Teacher login
+
+> POST http://127.0.0.1:8000/user/login
 ```json
-POST http://127.0.0.1:8000/user/login
 {
 "loginType": "teacher",
 "email": "msrafee@teacher.sust.edu",
@@ -112,11 +114,11 @@ POST http://127.0.0.1:8000/user/login
 }
 ```
 
-Response:
+> Response:
 ```json
 {
 "message": "Successfully logged in",
-"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwYzMzNmM0Mjc0MDQ3MGE1NzU0NjYzMCIsImVtYWlsIjoibXppQHRlYWNoZXIuc3VzdC5lZHUiLCJkZXNpZ25hdGlvbiI6IlByb2Zlc3NvciIsImRlcHRDb2RlIjoiQ1NFIiwiZGVwdE5hbWUiOiJDb21wdXRlciBTY2llbmNlIGFuZCBFbmdpbmVlcmluZyIsImRlcHRJZCI6IjYwYmY1NmQ2Yjc5OTZiMTI1YmE4N2IzNSIsImZpcnN0TmFtZSI6bnVsbCwibGFzdE5hbWUiOm51bGwsImdlbmRlciI6bnVsbCwiY29udGFjdE51bWJlciI6bnVsbCwiYWRkcmVzcyI6bnVsbCwiYmxvb2RHcm91cCI6bnVsbCwicm9sZSI6InRlYWNoZXIiLCJpYXQiOjE2MjM0MDY0NjksImV4cCI6MTYyMzQ5Mjg2OX0.J-jD17ZyrWJrsGlksYUsPiw-3PXpJd0tt8Ds_NnVku8",
+"token": TOKEN,
 "expiresIn": 86400,
 "user": {
 "id": "60c336c42740470a57546630",
@@ -141,8 +143,8 @@ Response:
 GET http://127.0.0.1:8000/user/userInfo
 x-auth-header: TOKEN
 
-Response:
-// for teacher
+> Response: _For teacher_
+```json
 {
 "user": {
 "firstName": null,
@@ -162,8 +164,10 @@ Response:
 "\_\_v": 0
 }
 }
+```
 
-//student
+> Response: _For student_
+```json
 {
 "user": {
 "firstName": null,
@@ -206,6 +210,7 @@ Response:
 }
 ]
 }
+```
 
 ### 6. Provide Teacher info (must have to pass token as x-auth-header)
 
