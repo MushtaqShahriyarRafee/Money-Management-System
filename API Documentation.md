@@ -99,8 +99,7 @@
 "address": null,
 "bloodGroup": null,
 "role": "student"
-}
-}
+}}
 ```
 
 ### 4. Teacher login
@@ -134,8 +133,7 @@
 "address": null,
 "bloodGroup": null,
 "role": "teacher"
-}
-}
+}}
 ```
 
 ### 5. Provide User info (must have to pass token as x-auth-header)
@@ -165,8 +163,7 @@
 "createdAt": "2021-06-11T10:11:16.665Z",
 "updatedAt": "2021-06-11T10:11:16.665Z",
 "_v": 0
-}
-}
+}}
 ```
 
 > Response: _For student_
@@ -209,10 +206,7 @@
 "totalMark": "20",
 "startingTime": "11/06/2021, 08:00:00PM",
 "duration": "20 mins"
-}
-}
-]
-}
+}}]}
 ```
 
 ### 6. Provide Teacher info (must have to pass token as x-auth-header)
@@ -243,8 +237,7 @@
 },
 "email": "msrafee@teacher.sust.edu",
 "password": "$2a$10$mnCs9pG7j9a71jGyTRj4l.oGTpd5oPHgikzVHOlNGNzN/D7eUXO6m"
-}
-}
+}}
 ```
 
 ### 7. Provide assigned courses of a teacher (must have to pass token as x-auth-header)
@@ -324,9 +317,7 @@
 "credit": "3"
 },
 "session": "2016-17"
-}
-]
-}
+}]}
 ```
 
 ### 8. Create an exam (must have to pass token as x-auth-header)
@@ -441,9 +432,7 @@ Response:
 "type": "mcq",
 "mark": "5",
 "answer": "O(nlogn)"
-}
-]
-}
+}]}
 ```
 
 ### 11. Storing answer of a student (must have to pass token as x-auth-header)
@@ -460,9 +449,7 @@ Response:
 },
 "5fe341e1e00afd363067402c": {
 "answer": "O(nlog(n))"
-}
-}
-}
+}}}
 ```
 
 > Response:
@@ -485,8 +472,7 @@ Response:
 "createdAt": "2021-06-02T10:24:54.619Z",
 "updatedAt": "2021-06-02T10:24:54.619Z",
 "_v": 0
-}
-}
+}}
 ```
 
 ### 12. Enroll an exam (must have to pass token as x-auth-header)
@@ -515,13 +501,12 @@ Response:
 "exam": {
 "examDescription": "Mechine Learning",
 "status": "sheduled",
-"\_id": "60b759ebfa1081186c7c6306",
+"_id": "60b759ebfa1081186c7c6306",
 "assignationId": "5fe19d7f4280e4363c0f8510",
 "examTitle": "Mechine Learning 1st-TT",
 "totalMark": "20",
 "startingTime": "8-1-2021",
 "duration": "3 hour",
 "examCode": "UgFf0NFe"
-}
-}
+}}
 ```
