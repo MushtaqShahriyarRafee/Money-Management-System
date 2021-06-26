@@ -181,7 +181,7 @@
 "address": null,
 "bloodGroup": null,
 "role": "student",
-"\_id": "60c33b9c52cc2f0c458e81b0",
+"_id": "60c33b9c52cc2f0c458e81b0",
 "regNo": "2016331000",
 "deptId": "60bf56d6b7996b125ba87b35",
 "password": "$2a$10$F23MIqejnh1iulKnpjhEuu.L5kPgYIY.CHI4i9H6dFsO1MwT3A6.6"
@@ -217,10 +217,12 @@
 
 ### 6. Provide Teacher info (must have to pass token as x-auth-header)
 
-GET [URL](https://sust-exam-management-system.herokuapp.com)/user/teacherInfo
-x-auth-header: TOKEN
+> GET [URL](https://sust-exam-management-system.herokuapp.com)/user/teacherInfo
+> 
+> x-auth-header: TOKEN
 
-Response:
+> Response:
+```json
 {
 "teacherInfo": {
 "firstName": null,
@@ -230,12 +232,12 @@ Response:
 "address": null,
 "bloodGroup": null,
 "role": "teacher",
-"\_id": "5fdefe5d2d9b1b3850a12267",
+"_id": "5fdefe5d2d9b1b3850a12267",
 "designation": "Professor",
 "deptId": {
 "school": "Applied Science",
 "address": "Sylhet",
-"\_id": "5fde29cde617183fe817ab24",
+"_id": "5fde29cde617183fe817ab24",
 "deptName": "Computer Science & Engineering",
 "deptCode": "CSE"
 },
@@ -243,13 +245,16 @@ Response:
 "password": "$2a$10$mnCs9pG7j9a71jGyTRj4l.oGTpd5oPHgikzVHOlNGNzN/D7eUXO6m"
 }
 }
+```
 
 ### 7. Provide assigned courses of a teacher (must have to pass token as x-auth-header)
 
-GET [URL](https://sust-exam-management-system.herokuapp.com)/user/assigns
-x-auth-header: TOKEN
+> GET [URL](https://sust-exam-management-system.herokuapp.com)/user/assigns
+> 
+> x-auth-header: TOKEN
 
-Response:
+> Response:
+```json
 {
 "assignsInfo": [
 {
@@ -322,12 +327,14 @@ Response:
 }
 ]
 }
+```
 
 ### 8. Create an exam (must have to pass token as x-auth-header)
 
-POST [URL](https://sust-exam-management-system.herokuapp.com)/exam/examInfo
-x-auth-header: TOKEN
-
+> POST [URL](https://sust-exam-management-system.herokuapp.com)/exam/examInfo
+>
+> x-auth-header: TOKEN
+```json
 {
 "assignationId": "5fe19d7f4280e4363c0f8510",
 "examTitle": "Mechine Learning 1st-TT",
@@ -343,7 +350,7 @@ Response:
 {
 "examDescription": "Mechine Learning",
 "status": "sheduled",
-"\_id": "60b759ebfa1081186c7c6306",
+"_id": "60b759ebfa1081186c7c6306",
 "assignationId": "5fe19d7f4280e4363c0f8510",
 "examTitle": "Mechine Learning 1st-TT",
 "totalMark": "20",
@@ -352,14 +359,16 @@ Response:
 "examCode": "UgFf0NFe",
 "createdAt": "2021-06-02T10:14:05.434Z",
 "updatedAt": "2021-06-02T10:14:05.434Z",
-"\_\_v": 0
+"_v": 0
 }
+```
 
 ### 9. Create a question (must have to pass token as x-auth-header)
 
-POST [URL](https://sust-exam-management-system.herokuapp.com)/exam/questionInfo
-x-auth-header: TOKEN
-
+> POST [URL](https://sust-exam-management-system.herokuapp.com)/exam/questionInfo
+> 
+> x-auth-header: TOKEN
+```json
 {
 "examId": "5ff94f8fb28715281cb0dc67",
 "question": "Complexity of Quick Sort?",
@@ -374,7 +383,7 @@ Response:
 "options": [
 "aaa"
 ],
-"\_id": "60b75a02fa1081186c7c6307",
+"_id": "60b75a02fa1081186c7c6307",
 "examId": "5ff94f8fb28715281cb0dc67",
 "question": "Complexity of Quick Sort?",
 "type": "mcq",
@@ -382,25 +391,29 @@ Response:
 "answer": "O(nlogn)",
 "createdAt": "2021-06-02T10:14:26.464Z",
 "updatedAt": "2021-06-02T10:14:26.464Z",
-"\_\_v": 0
+"_v": 0
 }
+```
 
 ### 10. Provide all the questions of a teacher (must have to pass token as x-auth-header)
 
-GET [URL](https://sust-exam-management-system.herokuapp.com)/exam/questionsOfTeacher
-x-auth-header: TOKEN
-
+> GET [URL](https://sust-exam-management-system.herokuapp.com)/exam/questionsOfTeacher
+> 
+> x-auth-header: TOKEN
+```json
 {
 "assignationId": "5fe19d7f4280e4363c0f8510"
 }
+```
 
-Response:
+> Response:
+```json
 {
 "message": "Retrieved Successfully",
 "examInfo": {
 "examDescription": "Mechine Learning",
 "status": "sheduled",
-"\_id": "5ff898cd7f570d1ae0e39af9",
+"_id": "5ff898cd7f570d1ae0e39af9",
 "assignationId": "5fe19d7f4280e4363c0f8510",
 "examTitle": "M",
 "totalMark": "20",
@@ -413,7 +426,7 @@ Response:
 "options": [
 "aaa"
 ],
-"\_id": "5ff94f34b28715281cb0dc65",
+"_id": "5ff94f34b28715281cb0dc65",
 "question": "Complexity of Quick Sort ?",
 "type": "mcq",
 "mark": "5",
@@ -423,7 +436,7 @@ Response:
 "options": [
 "aaa"
 ],
-"\_id": "5ff94f57b28715281cb0dc66",
+"_id": "5ff94f57b28715281cb0dc66",
 "question": "Complexity of Binary Sort ?",
 "type": "mcq",
 "mark": "5",
@@ -431,12 +444,14 @@ Response:
 }
 ]
 }
+```
 
 ### 11. Storing answer of a student (must have to pass token as x-auth-header)
 
-POST [URL](https://sust-exam-management-system.herokuapp.com)/exam/studentAnswerSheet
-x-auth-header: TOKEN
-
+> POST [URL](https://sust-exam-management-system.herokuapp.com)/exam/studentAnswerSheet
+> 
+> x-auth-header: TOKEN
+```json
 {
 "examId":"5ff898cd7f570d1ae0e39af9",
 "answers": {
@@ -448,13 +463,15 @@ x-auth-header: TOKEN
 }
 }
 }
+```
 
-Response:
+> Response:
+```json
 {
 "message": "Your answers have been stored, Thank you",
 "studentAnswers": {
 "obtainedMark": "0",
-"\_id": "60b75c76fa1081186c7c6309",
+"_id": "60b75c76fa1081186c7c6309",
 "examId": "5ff898cd7f570d1ae0e39af9",
 "studentId": "5fdefb220b5f374210d007a5",
 "answers": {
@@ -467,29 +484,33 @@ Response:
 },
 "createdAt": "2021-06-02T10:24:54.619Z",
 "updatedAt": "2021-06-02T10:24:54.619Z",
-"\_\_v": 0
+"_v": 0
 }
 }
+```
 
 ### 12. Enroll an exam (must have to pass token as x-auth-header)
 
-POST [URL](https://sust-exam-management-system.herokuapp.com)/enroll/enrollmentCode
-x-auth-header: TOKEN
-
+> POST [URL](https://sust-exam-management-system.herokuapp.com)/enroll/enrollmentCode
+> 
+> x-auth-header: TOKEN
+```json
 {
 "examCode" : "UgFf0NFe"
 }
+```
 
-Response:
+> Response:
+```json
 {
 "enroll": {
 "active": true,
-"\_id": "60b75aa0fa1081186c7c6308",
+"_id": "60b75aa0fa1081186c7c6308",
 "studentId": "5fdef168be7e5925f40fe5fd",
 "examId": "60b759ebfa1081186c7c6306",
 "createdAt": "2021-06-02T10:17:04.057Z",
 "updatedAt": "2021-06-02T10:17:04.057Z",
-"\_\_v": 0
+"_v": 0
 },
 "exam": {
 "examDescription": "Mechine Learning",
@@ -503,3 +524,4 @@ Response:
 "examCode": "UgFf0NFe"
 }
 }
+```
