@@ -1,3 +1,9 @@
+<style>
+H1{color:Blue !important;}
+H2{color:DarkOrange !important;}
+p{color:Black !important;}
+</style>
+
 ## API Documentation
 POST http://127.0.0.1:8000/user/register HTTP/1.1 Content-Type: application/json { "registrationType": "student", "deptId": "5fda38b9c1bc1027b4d76078", "regNo": "2016331078", "password": "2016331078", "confirmPassword": "2016331078" }
 ##### Response:
