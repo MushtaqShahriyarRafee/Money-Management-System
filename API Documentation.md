@@ -3,9 +3,9 @@
 #
 #
 
-> 1 (Student Registration)
+### 1 (Student Registration)
 
-#### POST [URL](https://sust-exam-management-system.herokuapp.com)/user/register
+> POST [URL](https://sust-exam-management-system.herokuapp.com)/user/register
 ```json
 {
 "registrationType": "student",
