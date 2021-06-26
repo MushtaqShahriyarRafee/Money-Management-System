@@ -23,7 +23,7 @@
 
 ## 2. Teacher Registration
 
-POST http://127.0.0.1:8000/user/register
+POST [URL](https://sust-exam-management-system.herokuapp.com)/user/register
 ```json
 {
 "registrationType": "teacher",
