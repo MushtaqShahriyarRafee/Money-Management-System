@@ -15,8 +15,10 @@
 "school": "Applied Science",
 "address": "Sylhet"
 }
+```
 
-Response:
+> Response:
+```json
 {
 "school": "Applied Science",
 "address": "Sylhet",
