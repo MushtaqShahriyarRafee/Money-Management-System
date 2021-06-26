@@ -1,5 +1,5 @@
-# Local URL: http://127.0.0.1:8000
-# Global URL: https://sust-exam-management-system.herokuapp.com
+## Local URL: http://127.0.0.1:8000
+## Global URL: https://sust-exam-management-system.herokuapp.com
 
 ## 1 (Student Registration)
 
