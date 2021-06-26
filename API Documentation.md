@@ -5,7 +5,7 @@
 
 ### 1. Student Registration
 
-> POST [URL](https://sust-exam-management-system.herokuapp.com)/user/register
+> POST [URL](http://127.0.0.1:8000)/user/register
 ```json
 {
 "registrationType": "student",
