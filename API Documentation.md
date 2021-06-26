@@ -25,7 +25,7 @@
   "expiresIn": 86400,
   "user": {
     "id": "60d78eff909eb8d7efd63270",
-    "regNo": "2016331099",
+    "regNo": "2016331078",
     "deptId": "60bf56d6b7996b125ba87b35",
     "deptCode": "CSE",
     "deptName": "Computer Science and Engineering",
@@ -34,9 +34,9 @@
 }
 ```
 
-## 2. Teacher Registration
+### 2. Teacher Registration
 
-POST [URL](https://sust-exam-management-system.herokuapp.com)/user/register
+> POST [URL](https://sust-exam-management-system.herokuapp.com)/user/register
 ```json
 {
 "registrationType": "teacher",
@@ -48,15 +48,28 @@ POST [URL](https://sust-exam-management-system.herokuapp.com)/user/register
 }
 ```
 
-Response: 
+> Response: 
 ```json
-"Registration successful"
+{
+  "authStatus": true,
+  "message": "Registration successful",
+  "token": TOKEN,
+  "expiresIn": 86400,
+  "user": {
+    "id": "60d79874909eb8d7efd63271",
+    "email": "enam@teacher.sust.edu",
+    "designation": "Associate Professor",
+    "deptCode": "CSE",
+    "deptName": "Computer Science and Engineering",
+    "deptId": "60bf56d6b7996b125ba87b35",
+    "role": "teacher"
+  }
+}
 ```
 
-## 3 (Student login)
-
+### 3. Student login
+> POST http://127.0.0.1:8000/user/login
 ```json
-POST http://127.0.0.1:8000/user/login
 {
 "loginType": "student",
 "regNo": "2016331028",
@@ -64,7 +77,7 @@ POST http://127.0.0.1:8000/user/login
 }
 ```
 
-Response:
+> Response:
 ```json
 {
 "authStatus": true,
@@ -89,7 +102,7 @@ Response:
 }
 ```
 
-## 4 (Teacher login)
+### 4. Teacher login
 ```json
 POST http://127.0.0.1:8000/user/login
 {
@@ -123,7 +136,7 @@ Response:
 }
 ```
 
-## Provide User info (must have to pass token as x-auth-header)
+### 5. Provide User info (must have to pass token as x-auth-header)
 
 GET http://127.0.0.1:8000/user/userInfo
 x-auth-header: TOKEN
@@ -194,7 +207,7 @@ Response:
 ]
 }
 
-## Provide Teacher info (must have to pass token as x-auth-header)
+### 6. Provide Teacher info (must have to pass token as x-auth-header)
 
 GET http://127.0.0.1:8000/user/teacherInfo
 x-auth-header: TOKEN
@@ -223,7 +236,7 @@ Response:
 }
 }
 
-## Provide assigned courses of a teacher (must have to pass token as x-auth-header)
+### 7. Provide assigned courses of a teacher (must have to pass token as x-auth-header)
 
 GET http://127.0.0.1:8000/user/assigns
 x-auth-header: TOKEN
@@ -302,7 +315,7 @@ Response:
 ]
 }
 
-## Create an exam (must have to pass token as x-auth-header)
+### 8. Create an exam (must have to pass token as x-auth-header)
 
 POST http://127.0.0.1:8000/exam/examInfo
 x-auth-header: TOKEN
@@ -334,7 +347,7 @@ Response:
 "\_\_v": 0
 }
 
-## Create a question (must have to pass token as x-auth-header)
+### 9. Create a question (must have to pass token as x-auth-header)
 
 POST http://127.0.0.1:8000/exam/questionInfo
 x-auth-header: TOKEN
@@ -364,7 +377,7 @@ Response:
 "\_\_v": 0
 }
 
-## Provide all the questions of a teacher (must have to pass token as x-auth-header)
+### 10. Provide all the questions of a teacher (must have to pass token as x-auth-header)
 
 GET http://127.0.0.1:8000/exam/questionsOfTeacher
 x-auth-header: TOKEN
@@ -411,7 +424,7 @@ Response:
 ]
 }
 
-## Storing answer of a student (must have to pass token as x-auth-header)
+### 11. Storing answer of a student (must have to pass token as x-auth-header)
 
 POST http://127.0.0.1:8000/exam/studentAnswerSheet
 x-auth-header: TOKEN
@@ -450,7 +463,7 @@ Response:
 }
 }
 
-## Enroll an exam (must have to pass token as x-auth-header)
+### 12. Enroll an exam (must have to pass token as x-auth-header)
 
 POST http://127.0.0.1:8000/enroll/enrollmentCode
 x-auth-header: TOKEN
