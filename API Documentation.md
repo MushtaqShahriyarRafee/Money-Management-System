@@ -18,7 +18,20 @@
 
 > Response: 
 ```json
-"Registration successful"
+{
+  "authStatus": true,
+  "message": "Registration successful",
+  "token": [TOKEN](),
+  "expiresIn": 86400,
+  "user": {
+    "id": "60d78eff909eb8d7efd63270",
+    "regNo": "2016331099",
+    "deptId": "60bf56d6b7996b125ba87b35",
+    "deptCode": "CSE",
+    "deptName": "Computer Science and Engineering",
+    "role": "student"
+  }
+}
 ```
 
 ## 2. Teacher Registration
