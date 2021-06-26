@@ -21,7 +21,7 @@
 {
   "authStatus": true,
   "message": "Registration successful",
-  "token": [TOKEN](http://127.0.0.1:8000),
+  "token": TOKEN,
   "expiresIn": 86400,
   "user": {
     "id": "60d78eff909eb8d7efd63270",
