@@ -109,7 +109,7 @@
 ```json
 {
 "loginType": "teacher",
-"email": "msrafee@teacher.sust.edu",
+"email": "mzi@teacher.sust.edu",
 "password": "2016331098"
 }
 ```
@@ -154,14 +154,14 @@ x-auth-header: TOKEN
 "address": null,
 "bloodGroup": null,
 "role": "teacher",
-"\_id": "60c336c42740470a57546630",
+"_id": "60c336c42740470a57546630",
 "designation": "Professor",
 "deptId": "60bf56d6b7996b125ba87b35",
 "email": "mzi@teacher.sust.edu",
 "password": "$2a$10$Hu2k/td/TExCgsEYIcrMfuK2aItV/A1MNus2/0vGRPGd8hCWR2K96",
 "createdAt": "2021-06-11T10:11:16.665Z",
 "updatedAt": "2021-06-11T10:11:16.665Z",
-"\_\_v": 0
+"_v": 0
 }
 }
 ```
