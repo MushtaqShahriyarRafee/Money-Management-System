@@ -140,7 +140,7 @@
 
 ### 5. Provide User info (must have to pass token as x-auth-header)
 
-> GET [URL](https://sust-exam-management-system.herokuapp.com)/user/userInfo 
+> GET [URL](https://sust-exam-management-system.herokuapp.com)/user/userInfo
 > x-auth-header: TOKEN
 
 > Response: _For teacher_
