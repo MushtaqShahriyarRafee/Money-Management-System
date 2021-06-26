@@ -16,7 +16,7 @@
 }
 ```
 
-Response: 
+> Response: 
 ```json
 "Registration successful"
 ```
