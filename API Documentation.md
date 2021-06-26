@@ -3,7 +3,7 @@
 #
 #
 
-### 1 (Student Registration)
+### 1. Student Registration
 
 > POST [URL](https://sust-exam-management-system.herokuapp.com)/user/register
 ```json
@@ -21,7 +21,7 @@
 "Registration successful"
 ```
 
-## 2 (Teacher Registration)
+## 2. Teacher Registration
 
 POST http://127.0.0.1:8000/user/register
 ```json
